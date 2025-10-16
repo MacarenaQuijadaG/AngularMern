@@ -1,45 +1,55 @@
 <div class="container mt-5">
-    <div class="row">
-        <div class="col-lg-8 offset-lg-2">
-            <div class="card">
-                <div class="card-body text-center">
-                    <span class="titulo">LISTADO DE PRODUCTOS</span>
-                    <button class="btn btn-success float-end" routerLink="/crear-producto">NUEVO</button>
-                    <table class="table table-striped mt-3">
-                    <thead>
-                        <tr>
-                        <th scope="col">Producto</th>
-                        <th scope="col">Categoria</th>
-                        <th scope="col">Ubicacion</th>
-                        <th scope="col">Precio</th>
-                        <th scope="col">Acciones</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                        <th>Coca Cola</th>
-                        <td>Bebida</td>
-                        <td>Buenos Aires</td>
-                        <td>2</td>
-                        <td>
-                            <i class="fas fa-edit text-primary"></i>
-                            <i class="fas fa-trash text-danger"></i>
-                        </td>
-                        </tr>
-                        <tr>
-                        <th>Malboro 20</th>
-                        <td>Cigarrillos</td>
-                        <td>Barcelona</td>
-                        <td>3</td>
-                        <td>
-                            <i class="fas fa-edit text-primary"></i>
-                            <i class="fas fa-trash text-danger"></i>
-                        </td>
-                        </tr>
-                    </tbody>
-                    </table>
-                </div>
-            </div>
+  <div class="row">
+    <div class="col-lg-8 offset-lg-2">
+      <div class="card">
+        <div class="card-body text-center">
+          <span class="titulo">LISTADO DE PRODUCTOS</span>
+
+          <!-- Alerta de éxito -->
+          <div *ngIf="mensajeExito" class="alert alert-success mt-3" role="alert">
+             {{ mensajeExito }}
+          </div>
+
+          <!-- Botón para crear nuevo producto -->
+          <button class="btn btn-success float-end" routerLink="/crear-producto">NUEVO</button>
+
+          <table class="table table-striped mt-3">
+            <thead>
+              <tr>
+                <th scope="col">Producto</th>
+                <th scope="col">Categoria</th>
+                <th scope="col">Ubicación</th>
+                <th scope="col">Precio</th>
+                <th scope="col">Acciones</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- Ejemplo de productos estáticos -->
+              <tr>
+                <td>Coca Cola</td>
+                <td>Bebida</td>
+                <td>Buenos Aires</td>
+                <td>2</td>
+                <td>
+                  <i class="fas fa-edit text-primary"></i>
+                  <i class="fas fa-trash text-danger"></i>
+                </td>
+              </tr>
+              <tr>
+                <td>Malboro 20</td>
+                <td>Cigarrillos</td>
+                <td>Barcelona</td>
+                <td>3</td>
+                <td>
+                  <i class="fas fa-edit text-primary"></i>
+                  <i class="fas fa-trash text-danger"></i>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
         </div>
+      </div>
     </div>
+  </div>
 </div>
